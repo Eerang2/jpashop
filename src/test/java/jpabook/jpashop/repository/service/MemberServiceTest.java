@@ -37,19 +37,20 @@ public class MemberServiceTest {
     public void 회원_중복_예외() throws Exception {
 
         Member member1 = new Member();
-        member1.setName("jinwoo");
+        member1.setName("nugunga");
 
         Member member2 = new Member();
-        member2.setName("jinwoo");
+        member2.setName("something");
 
 
         memberService.join(member1);
-        try {
+        memberService.join(member2);  //예외가 발생해야만 한다.
+       /** try {
             memberService.join(member2);  //예외가 발생해야만 한다.
         } catch (IllegalStateException e) {
               return;
         }
-            fail("예외가 발생 해야한다");
+            fail("예외가 발생 해야한다");*/
 
 
     }

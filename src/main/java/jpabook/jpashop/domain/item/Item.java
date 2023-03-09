@@ -22,7 +22,11 @@ public class Item {
     private Long id;
 
     private String name;
+
+    // 가격
     private int price;
+
+    // 주문량
     private int stockQuantity;
 
     @ManyToMany(mappedBy = "items")

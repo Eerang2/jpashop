@@ -16,9 +16,8 @@ public class ItemRepository {
     public void save(Item item) {
         if(item.getId() == null) {
             em.persist(item);
-        }else {
+        } else {
             em.merge(item);
-
         }
     }
     public Item findOne(Long id) {

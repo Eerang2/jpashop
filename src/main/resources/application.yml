@@ -4,6 +4,7 @@ spring:
     url: jdbc:mysql://localhost:3306/jpashop
     username: root # 시간되면 별도 계정을 만들어서 권한이 제한된 걸로 바꿔야
     password: DLWlsdn1!!
+
   jpa:
     hibernate:
       ddl-auto: create # 어플리케이션이 시작할 때 entity class에 매핑되는 테이블을 자동으로 생성해준다.

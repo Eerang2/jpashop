@@ -64,18 +64,21 @@ public class ItemController {
 
     }
     @PostMapping("items/{itemId}/edit")
-    public String updateItem(@PathVariable String itemId, @ModelAttribute ("form") BookForm form) {
+    public String updateItem(@PathVariable Long itemId, @ModelAttribute ("form") BookForm form) {
 
-        Book book = new Book();
-        book.setId(form.getId());
-        book.setName(form.getName());
-        book.setPrice(form.getPrice());
-        book.setStockQuantity(form.getStockQuantity());
-        book.setAuthor(form.getAuthor());
-        book.setIsbn(form.getIsbn());
+        itemService.updateItem(itemId, form.getName(), form.getPrice(), form.getStockQuantity());
+        return "redirect:/items";
 
-        itemService.saveItem(book);
-        return "rediect:/items";
+
+        //--이런 방법이 있으나 merge 사용으로 간편하게 바꿔짐--//
+//             ⬇
+//        Book book = new Book();
+//        book.setId(form.getId());
+//        book.setName(form.getName());
+//        book.setPrice(form.getPrice());
+//        book.setStockQuantity(form.getStockQuantity());
+//        book.setAuthor(form.getAuthor());
+//        book.setIsbn(form.getIsbn());
     }
 
 }

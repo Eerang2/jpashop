@@ -1,4 +1,4 @@
-package jpabook.jpashop.repository.service;
+package jpabook.jpashop.domain.service;
 
 import jpabook.jpashop.domain.*;
 import jpabook.jpashop.domain.item.Item;

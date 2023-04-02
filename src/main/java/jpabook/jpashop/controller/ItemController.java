@@ -2,10 +2,8 @@ package jpabook.jpashop.controller;
 
 import jpabook.jpashop.domain.item.Book;
 import jpabook.jpashop.domain.item.Item;
-import jpabook.jpashop.repository.service.ItemService;
+import jpabook.jpashop.domain.service.ItemService;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.apachecommons.CommonsLog;
-import net.bytebuddy.asm.MemberSubstitution;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

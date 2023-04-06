@@ -22,7 +22,7 @@ public class ItemController {
     @GetMapping("/item/new")
     public String createForm(Model model) {
         model.addAttribute("form", new BookForm());
-        return "item/createItemForm";
+        return "items/createItemForm";
     }
 
     @PostMapping("/item/new")

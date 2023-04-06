@@ -33,7 +33,7 @@ public class OrderController {
         return "order/orderForm";
     }
 
-    @PostMapping("order")
+    @PostMapping("/order")
     public String order(@RequestParam("memebrId") Long memberId,
                         @RequestParam("itemId") Long itemId,
                         @RequestParam("count") int count) {
@@ -53,6 +53,6 @@ public class OrderController {
     @PostMapping("/orders/{orderId}/cancel")
     public String cancelOrder(@PathVariable("orderId") Long orderId) {
         orderService.cancelOrder(orderId);
-        return "redirect/orders";
+        return "redirect:/orders";
     }
 }

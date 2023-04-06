@@ -30,7 +30,7 @@ public class MemberController {
     public String create(@Valid MemberForm form, BindingResult result) {
 
         if (result.hasErrors()) {
-            return "members/creatMemberForm";
+            return "members/createMemberForm";
         }
 
         Address address = new Address(form.getCity(), form.getStreet(), form.getZipcode());
@@ -46,7 +46,7 @@ public class MemberController {
     public String List(Model model) {
         List<Member> members = memberService.findMembers();
         model.addAttribute("members", members);
-        return "members/membersList";
+        return "members/memberList";
     }
 
 }
